@@ -62,9 +62,11 @@ public class BaseTest {
             caps.setCapability("platformVersion", platformVersion);
             caps.setCapability("avdLaunchTimeout", "300000");
             caps.setCapability("avdReadyTimeout", "300000");
+            caps.setCapability("newCommandTimeout", 500);
 
             URL url = new URL(props.getProperty("appiumURL")); // global parameter in config file
             driver = new AndroidDriver(url, caps);
+            System.out.println("Session ID" + driver.getSessionId());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,7 +109,7 @@ public class BaseTest {
     @AfterTest
     public void quitDriver() {
 
-        driver.quit();
+       driver.quit();
 
 
     }
