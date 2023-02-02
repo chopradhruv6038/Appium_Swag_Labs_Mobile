@@ -31,7 +31,6 @@ public class BaseTest {
 
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
-
     }
 
 
@@ -80,27 +79,19 @@ public class BaseTest {
 
 
     public void waitForVisibility(WebElement e) {
-
-
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TestUtils.WAIT));
-
         wait.until(ExpectedConditions.visibilityOf(e));
     }
-
 
     public void click(WebElement e) {
         waitForVisibility(e);
         e.click();
     }
 
-
-
     public void sendkeys(WebElement e, String txt) {
         waitForVisibility(e);
         e.sendKeys(txt);
     }
-
-
 
     public String getAttribute(WebElement e, String attribute) {
         waitForVisibility(e);

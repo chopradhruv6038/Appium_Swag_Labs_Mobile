@@ -72,7 +72,9 @@ public class LoginTests extends BaseTest {
         loginPage.enterPassword("secret_sauce");
         productsPage = loginPage.pressLoginBtn();
 
-        productsPage.assertProductsPageTitleText().assertProductPageTitleTextIsDisplayed();
+        productsPage.assertProductsPageTitleText().assertProductPageTitleTextIsDisplayed()
+                .assertSauceLabsBackPackIMGIsDisplayed().assertSauceLabsBackPackTitle()
+                .assertSauceLabsBackPackPrice().assertAddToCartBtn();
 
     }
 
