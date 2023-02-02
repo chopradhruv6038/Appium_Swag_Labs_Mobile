@@ -65,8 +65,10 @@ public class BaseTest {
             caps.setCapability("newCommandTimeout", 500);
 
             URL url = new URL(props.getProperty("appiumURL")); // global parameter in config file
+
             driver = new AndroidDriver(url, caps);
-            System.out.println("Session ID" + driver.getSessionId());
+
+            System.out.println("Session ID : " + driver.getSessionId());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -81,6 +83,7 @@ public class BaseTest {
 
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TestUtils.WAIT));
+
         wait.until(ExpectedConditions.visibilityOf(e));
     }
 
@@ -109,7 +112,7 @@ public class BaseTest {
     @AfterTest
     public void quitDriver() {
 
-       driver.quit();
+      // driver.quit();
 
 
     }
