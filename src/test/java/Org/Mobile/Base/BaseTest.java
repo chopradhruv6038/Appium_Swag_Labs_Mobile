@@ -39,8 +39,6 @@ public class BaseTest {
     public void startDriver(String platformName, String platformVersion, String deviceName,
                             String avd, String udid) throws IOException {
 
-        try {
-
             props = new Properties();
 
             String propFileName = "config.properties";
@@ -68,11 +66,6 @@ public class BaseTest {
             driver = new AndroidDriver(url, caps);
 
             System.out.println("Session ID : " + driver.getSessionId());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw e;
-        }
 
     }
 

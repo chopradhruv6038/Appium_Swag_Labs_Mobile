@@ -17,9 +17,9 @@
         <classes>
             <class name="Org.Mobile.Tests.LoginTests">
 
-                <methods>
-                    <include name="successfulLoginTests"/>
-                </methods>
+               <!-- <methods>
+                    <include name="InvalidUserNameTests"/>
+                </methods>-->
             </class>
         </classes>
     </test>

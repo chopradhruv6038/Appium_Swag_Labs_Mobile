@@ -3,6 +3,9 @@ package Org.Mobile.Tests;
 import Org.Mobile.Base.BaseTest;
 import Org.Mobile.pom.LoginPage;
 import Org.Mobile.pom.ProductsPage;
+import com.google.gson.JsonObject;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -15,6 +18,33 @@ public class LoginTests extends BaseTest {
 
     LoginPage loginPage;
     ProductsPage productsPage;
+    InputStream datais;
+    JSONObject loginUsers;
+
+
+    @BeforeClass
+    public void beforeClass() throws IOException {
+
+        try {
+
+            String dataFileName = "Data/loginUsers.json";
+
+            datais = getClass().getClassLoader().getResourceAsStream(dataFileName);
+
+            JSONTokener tokener = new JSONTokener(datais);
+
+            loginUsers = new JSONObject(tokener);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (datais != null) {
+                datais.close();
+            }
+        }
+
+
+    }
 
 
     @BeforeMethod
@@ -34,8 +64,8 @@ public class LoginTests extends BaseTest {
     @Test
     public void InvalidUserNameTests() throws IOException {
 
-        loginPage.enterUserName("invalid");
-        loginPage.enterPassword("secret_sauce");
+        loginPage.enterUserName(loginUsers.getJSONObject("invalidUserName").getString("userName"));
+        loginPage.enterPassword(loginUsers.getJSONObject("invalidUserName").getString("password"));
         loginPage.pressLoginBtn();
         loginPage.assertInvalidUsernamePasswordError();
 
@@ -44,8 +74,8 @@ public class LoginTests extends BaseTest {
     @Test
     public void invalidPasswordTests() {
 
-        loginPage.enterUserName("standard_user");
-        loginPage.enterPassword("invalid password");
+        loginPage.enterUserName(loginUsers.getJSONObject("invalidPassword").getString("userName"));
+        loginPage.enterPassword(loginUsers.getJSONObject("invalidPassword").getString("password"));
         loginPage.pressLoginBtn();
 
         loginPage.assertInvalidUsernamePasswordError();
@@ -55,8 +85,8 @@ public class LoginTests extends BaseTest {
     @Test
     public void lockedOutUserTests() {
 
-        loginPage.enterUserName("locked_out_user");
-        loginPage.enterPassword("secret_sauce");
+        loginPage.enterUserName(loginUsers.getJSONObject("lockedOutUser").getString("userName"));
+        loginPage.enterPassword(loginUsers.getJSONObject("lockedOutUser").getString("password"));
         loginPage.pressLoginBtn();
 
         loginPage.assertLockedOutUserErrorText();
@@ -64,12 +94,11 @@ public class LoginTests extends BaseTest {
     }
 
 
-
     @Test
-    public void successfulLoginTests(){
+    public void successfulLoginTests() {
 
-        loginPage.enterUserName("standard_user");
-        loginPage.enterPassword("secret_sauce");
+        loginPage.enterUserName(loginUsers.getJSONObject("validUserNamePassword").getString("userName"));
+        loginPage.enterPassword(loginUsers.getJSONObject("validUserNamePassword").getString("password"));
         productsPage = loginPage.pressLoginBtn();
 
         productsPage.assertProductsPageTitleText().assertProductPageTitleTextIsDisplayed()
