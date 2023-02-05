@@ -2,17 +2,34 @@ package Org.Mobile.pom;
 
 import Org.Mobile.Base.BaseTest;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginPage extends BaseTest {
 
 
-    @AndroidFindBy(accessibility = "test-Username") private WebElement usernameTxtFld;
-    @AndroidFindBy (accessibility = "test-Password") private WebElement passwordTxtFld;
-    @AndroidFindBy (accessibility = "test-LOGIN") private WebElement logintxtFld;
-    @AndroidFindBy (xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView") private WebElement errorTxtInvalidUsrnmPswd;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView") private WebElement errorTextLockedOutUser;
+    @AndroidFindBy(accessibility = "test-Username")
+    @iOSXCUITFindBy(id = "test-Username")
+    private WebElement usernameTxtFld;
+
+    @AndroidFindBy (accessibility = "test-Password")
+    @iOSXCUITFindBy(id ="test-Password")
+    private WebElement passwordTxtFld;
+
+    @AndroidFindBy (accessibility = "test-LOGIN")
+    @iOSXCUITFindBy(id = "test-LOGIN")
+    private WebElement logintxtFld;
+
+    @AndroidFindBy (xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView")
+    @iOSXCUITFindBy(id = "Username and password do not match any user in this service.")
+    private WebElement errorTxtInvalidUsrnmPswd;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView")
+    @iOSXCUITFindBy(id = "Sorry, this user has been locked out.")
+    private WebElement errorTextLockedOutUser;
+
+    //Static text.
 
     String expectedErrorTextInvalidUsernamePasswrd = "Username and password do not match any user in this service.";
 
@@ -20,11 +37,13 @@ public class LoginPage extends BaseTest {
 
 
     public LoginPage enterUserName (String username){
+        usernameTxtFld.clear();
         sendkeys(usernameTxtFld, username);
         return this;
     }
 
     public LoginPage enterPassword (String password){
+        passwordTxtFld.clear();
         sendkeys(passwordTxtFld, password);
         return this;
     }
@@ -37,7 +56,7 @@ public class LoginPage extends BaseTest {
 
     public String getInvalidUsernamePasswordErrorText(){
 
-        return getAttribute(errorTxtInvalidUsrnmPswd, "text");
+        return getText(errorTxtInvalidUsrnmPswd);
 
     }
 
@@ -58,7 +77,7 @@ public class LoginPage extends BaseTest {
 
     public String getLockedOutUserErrorText(){
 
-        return getAttribute(errorTextLockedOutUser, "text");
+        return getText(errorTextLockedOutUser);
 
     }
 

@@ -37,6 +37,7 @@ public class LoginTests extends BaseTest {
 
         } catch (Exception e) {
             e.printStackTrace();
+            throw e;
         } finally {
             if (datais != null) {
                 datais.close();
@@ -65,6 +66,7 @@ public class LoginTests extends BaseTest {
     public void InvalidUserNameTests() throws IOException {
 
         loginPage.enterUserName(loginUsers.getJSONObject("invalidUserName").getString("userName"));
+
         loginPage.enterPassword(loginUsers.getJSONObject("invalidUserName").getString("password"));
         loginPage.pressLoginBtn();
         loginPage.assertInvalidUsernamePasswordError();

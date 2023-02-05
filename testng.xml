@@ -8,11 +8,10 @@
 
     <test name="SwagLabsMobileTesting">
 
-        <parameter name="platformName" value="Android"/>
-        <parameter name="platformVersion" value="12.0"/>
-        <parameter name="deviceName" value="Any device name"/>
-        <parameter name="udid" value="emulator-5554"/>
-        <parameter name="avd" value="Pixel_4"/>
+        <parameter name="platformName" value="iOS"/>
+        <parameter name="platformVersion" value="16.2"/>
+        <parameter name="deviceName" value="iPhone 14 Pro Max"/>
+
 
         <classes>
             <class name="Org.Mobile.Tests.LoginTests">
