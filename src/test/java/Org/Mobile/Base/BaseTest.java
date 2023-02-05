@@ -112,6 +112,10 @@ public class BaseTest {
         wait.until(ExpectedConditions.visibilityOf(e));
     }
 
+    public void clear(WebElement e){
+        clear(e);
+    }
+
     public void click(WebElement e) {
         waitForVisibility(e);
         e.click();
@@ -119,6 +123,7 @@ public class BaseTest {
 
     public void sendkeys(WebElement e, String txt) {
         waitForVisibility(e);
+        e.clear();
         e.sendKeys(txt);
     }
 

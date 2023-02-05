@@ -37,13 +37,11 @@ public class LoginPage extends BaseTest {
 
 
     public LoginPage enterUserName (String username){
-        usernameTxtFld.clear();
         sendkeys(usernameTxtFld, username);
         return this;
     }
 
     public LoginPage enterPassword (String password){
-        passwordTxtFld.clear();
         sendkeys(passwordTxtFld, password);
         return this;
     }
