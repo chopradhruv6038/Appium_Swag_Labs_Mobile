@@ -50,7 +50,7 @@ public class ProductsPage extends BaseTest {
 
         Assert.assertEquals(getActualProductsPageTitle(), ProductsPageExpectedTitle());
 
-        System.out.println("Actual Products page title : " + getActualProductsPageTitle() + " Expected products page title : " + ProductsPageExpectedTitle());
+        System.out.println("\n" + "Actual Products page title : " + getActualProductsPageTitle() + "\n" + "Expected products page title : " + ProductsPageExpectedTitle() + "\n");
 
         return this;
 

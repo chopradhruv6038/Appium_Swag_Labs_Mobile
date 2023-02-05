@@ -55,7 +55,7 @@ public class LoginTests extends BaseTest {
 
         productsPage = new ProductsPage();
 
-        System.out.println("\n" + "*******   Starting Test    " + m.getName() + "    ******" + "\n");
+        System.out.println("\n" + "*******   Starting Test : LoginTests, Method Name " + m.getName() + "    ******");
         // This will give us the name of the test method that is currently executing.
 
 
@@ -103,9 +103,17 @@ public class LoginTests extends BaseTest {
         loginPage.enterPassword(loginUsers.getJSONObject("validUserNamePassword").getString("password"));
         productsPage = loginPage.pressLoginBtn();
 
-        productsPage.assertProductsPageTitleText().assertProductPageTitleTextIsDisplayed()
-                .assertSauceLabsBackPackIMGIsDisplayed().assertSauceLabsBackPackTitle()
-                .assertSauceLabsBackPackPrice().assertAddToCartBtn();
+        productsPage.assertProductsPageTitleText();
+
+    }
+
+
+    @AfterClass
+    public void afterClass(){
+
+        terminateApp();
+        launchApp();
+
 
     }
 

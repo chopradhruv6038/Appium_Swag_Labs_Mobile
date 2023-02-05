@@ -2,6 +2,7 @@ package Org.Mobile.Base;
 
 import Org.Mobile.Utils.TestUtils;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -10,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -74,7 +76,7 @@ public class BaseTest {
 
                 url = new URL(props.getProperty("appiumURL")); // global parameter in config file
                 driver = new AndroidDriver(url, caps);
-                System.out.println("Session ID : " + driver.getSessionId());
+                System.out.println("Session ID Android : " + driver.getSessionId());
 
                 break;
 
@@ -112,7 +114,7 @@ public class BaseTest {
         wait.until(ExpectedConditions.visibilityOf(e));
     }
 
-    public void clear(WebElement e){
+    public void clear(WebElement e) {
         clear(e);
     }
 
@@ -141,17 +143,51 @@ public class BaseTest {
             case "android":
                 return getAttribute(e, "text");
 
+
             case "iOS":
                 return getAttribute(e, "label");
         }
         return null;
     }
 
+    //below methods to terminate and launch apps in after methods so that classes can execute independently.
+
+    public void terminateApp() {
+
+        switch (platformname) {
+
+            case "android":
+                ((InteractsWithApps) driver).terminateApp(props.getProperty("androidAppActivity"));
+                break;
+            case "iOS":
+                ((InteractsWithApps) driver).terminateApp(props.getProperty("iOSBundleId"));
+
+        }
+
+
+    }
+
+    public void launchApp() {
+        switch (platformname) {
+
+            case "android":
+                ((InteractsWithApps) driver).activateApp(props.getProperty("androidAppActivity"));
+                break;
+
+            case "iOS":
+                ((InteractsWithApps) driver).activateApp(props.getProperty("iOSBundleId"));
+
+
+        }
+
+
+    }
+
 
     @AfterTest
     public void quitDriver() {
 
-        // driver.quit();
+        driver.quit();
 
 
     }
