@@ -9,18 +9,18 @@
 
     <test name="SwagLabsMobileTestingLoginTests">
 
-        <parameter name="platformName" value="iOS"/>
+      <!--  <parameter name="platformName" value="iOS"/>
         <parameter name="platformVersion" value="16.2"/>
-        <parameter name="deviceName" value="iPhone 14 Pro Max"/>
+        <parameter name="deviceName" value="iPhone 14 Pro Max"/>-->
 
-       <!-- <parameter name="platformName" value="android"/>
+        <parameter name="platformName" value="android"/>
         <parameter name="platformVersion" value="12.0"/>
-        <parameter name="deviceName" value="Pixel_4"/>-->
+        <parameter name="deviceName" value="Pixel_4"/>
 
        <classes>
 
             <class name="Org.Mobile.Tests.LoginTests"/>
-           <class name="Org.Mobile.Tests.ProductsTests"/>
+            <class name="Org.Mobile.Tests.ProductsTests"/>
 
                <!-- <methods>
                     <include name="InvalidUserNameTests"/>

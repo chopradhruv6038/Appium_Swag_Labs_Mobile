@@ -89,6 +89,8 @@ public class ProductsPage extends BaseTest {
 
         Assert.assertEquals(getSauceLabsBackPackTitle(), sauceLabsBackPackExpectedTitle());
 
+        System.out.println("\n" + "Actual SLB Title : " + getSauceLabsBackPackTitle() + "\n" + "Expected SLB Title : " + sauceLabsBackPackExpectedTitle() );
+
         return this;
     }
 
@@ -106,6 +108,8 @@ public class ProductsPage extends BaseTest {
     public ProductsPage assertSauceLabsBackPackPrice() {
 
         Assert.assertEquals(getSauceLabsBackPackPrice(), expectedPriceSauceLabsBackPack());
+
+        System.out.println("\n" + "Actual SLB Price : " + getSauceLabsBackPackPrice() + "\n" + "Expected SLB Price : " + expectedPriceSauceLabsBackPack());
 
         return this;
 

@@ -157,7 +157,7 @@ public class BaseTest {
         switch (platformname) {
 
             case "android":
-                ((InteractsWithApps) driver).terminateApp(props.getProperty("androidAppActivity"));
+                ((InteractsWithApps) driver).terminateApp(props.getProperty("androidAppPackage"));
                 break;
             case "iOS":
                 ((InteractsWithApps) driver).terminateApp(props.getProperty("iOSBundleId"));
@@ -171,7 +171,7 @@ public class BaseTest {
         switch (platformname) {
 
             case "android":
-                ((InteractsWithApps) driver).activateApp(props.getProperty("androidAppActivity"));
+                ((InteractsWithApps) driver).activateApp(props.getProperty("androidAppPackage"));
                 break;
 
             case "iOS":

@@ -111,7 +111,10 @@ public class LoginTests extends BaseTest {
     @AfterClass
     public void afterClass(){
 
+
+
         terminateApp();
+
         launchApp();
 
 
