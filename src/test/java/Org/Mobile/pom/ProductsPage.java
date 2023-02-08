@@ -17,6 +17,10 @@ public class ProductsPage extends BaseTest {
     private WebElement SauceLabsBackPackIMG;
 
     @AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"test-Item title\"])[1]")
+    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Sauce Labs Backpack\"")
+    private WebElement productSLB;
+
+    @AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"test-Item title\"])[1]")
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[1]")
     private WebElement SauceLabsBackPackTitle;
 
@@ -138,6 +142,13 @@ public class ProductsPage extends BaseTest {
         assert AddToCartBtn.isEnabled();
         //Assert.assertEquals(getAddToCartBtnClickableValue(), "false");
         return this;
+    }
+
+    public ProductsDescriptionPage clickSlbProduct(){
+
+        click(productSLB);
+
+        return new ProductsDescriptionPage();
     }
 
 

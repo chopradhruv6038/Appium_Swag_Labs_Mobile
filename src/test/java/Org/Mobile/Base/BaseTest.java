@@ -1,13 +1,16 @@
 package Org.Mobile.Base;
 
 import Org.Mobile.Utils.TestUtils;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.Properties;
 
 public class BaseTest {
@@ -72,7 +76,7 @@ public class BaseTest {
                 caps.setCapability("udid", props.getProperty("androidUdid"));
                 caps.setCapability("avdLaunchTimeout", "300000");
                 caps.setCapability("avdReadyTimeout", "300000");
-                caps.setCapability("newCommandTimeout", 500);
+                caps.setCapability("newCommandTimeout", 1000);
 
                 url = new URL(props.getProperty("appiumURL")); // global parameter in config file
                 driver = new AndroidDriver(url, caps);
@@ -150,6 +154,31 @@ public class BaseTest {
         return null;
     }
 
+
+    public WebElement androidScrollToElement(){ //not working need to check
+
+        return driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector()" + ".description(\"test-Inventory item page\")).scrollIntoView("
+                        + "new UiSelector().description(\"test-ADD TO CART\"));"));
+
+    }
+
+
+    public void iOSScrollToElement() {
+        RemoteWebElement element = (RemoteWebElement)driver.findElement(By.className("XCUIElementTypeOther"));//Parent element which should be scrollable
+        //class name in above statement is the locator
+        String elementID = element.getId(); //getting the id of the parent element
+        HashMap<String, String> scrollObject = new HashMap<String, String>();//creating a hashmap object
+        scrollObject.put("element", elementID); //passing the element id using the element key.
+        scrollObject.put("direction", "down"); //direction of the scroll
+        scrollObject.put("predicateString", "label == 'ADD TO CART'"); //child element to where you want to scroll the page.
+//	  scrollObject.put("name", "test-ADD TO CART");
+//	  scrollObject.put("toVisible", "sdfnjksdnfkld");
+        driver.executeScript("mobile:scroll", scrollObject); //using execute script option and using mobile:scroll command we will perform the scrolling for parent element
+    //it will scroll upto the height of the scrollable element.
+    }
+
+
     //below methods to terminate and launch apps in after methods so that classes can execute independently.
 
     public void terminateApp() {
@@ -187,7 +216,7 @@ public class BaseTest {
     @AfterTest
     public void quitDriver() {
 
-        driver.quit();
+       // driver.quit();
 
 
     }
