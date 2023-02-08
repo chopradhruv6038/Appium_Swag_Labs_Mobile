@@ -1,0 +1,33 @@
+{
+  "invalidUserName": {
+
+    "userName" : "invalid",
+    "password": "secret_sauce"
+
+  },
+
+  "invalidPassword": {
+
+    "userName": "standard_user",
+    "password": "invalid"
+
+  },
+
+  "lockedOutUser": {
+
+    "userName": "locked_out_user",
+    "password": "secret_sauce"
+
+  },
+
+"validUserNamePassword": {
+
+  "userName": "standard_user",
+  "password": "secret_sauce"
+
+},
+
+  "SLBDetails": {
+    "SLBPrice": "$29.99"
+  }
+}

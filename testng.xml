@@ -19,8 +19,9 @@
 -->
        <classes>
 
-            <!--<class name="Org.Mobile.Tests.LoginTests"/>-->
+            <class name="Org.Mobile.Tests.LoginTests"/>
             <class name="Org.Mobile.Tests.ProductsTests"/>
+           <class name="Org.Mobile.Tests.ProductDetailsTests"/>
 
                <!-- <methods>
                     <include name="InvalidUserNameTests"/>

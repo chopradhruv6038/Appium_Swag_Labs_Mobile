@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="10" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-08T22:49:05 GST" name="All Test Suite" finished-at="2023-02-08T22:50:14 GST" duration-ms="68812">
+    <groups>
+    </groups>
+    <test started-at="2023-02-08T22:49:05 GST" name="SwagLabsMobileTestingLoginTests" finished-at="2023-02-08T22:50:14 GST" duration-ms="68812">
+      <class name="Org.Mobile.Tests.LoginTests">
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:05 GST" name="startDriver" finished-at="2023-02-08T22:49:11 GST" duration-ms="5719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[16.2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[iPhone 14 Pro Max]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="beforeClass" finished-at="2023-02-08T22:49:11 GST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="beforeMethod" finished-at="2023-02-08T22:49:11 GST" duration-ms="164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.LoginTests.InvalidUserNameTests() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="InvalidUserNameTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="InvalidUserNameTests" finished-at="2023-02-08T22:49:17 GST" duration-ms="5835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUserNameTests -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:17 GST" name="beforeMethod" finished-at="2023-02-08T22:49:17 GST" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.LoginTests.invalidPasswordTests()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidPasswordTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:17 GST" name="invalidPasswordTests" finished-at="2023-02-08T22:49:23 GST" duration-ms="6032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPasswordTests -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:23 GST" name="beforeMethod" finished-at="2023-02-08T22:49:23 GST" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.LoginTests.lockedOutUserTests()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="lockedOutUserTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:23 GST" name="lockedOutUserTests" finished-at="2023-02-08T22:49:29 GST" duration-ms="6483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lockedOutUserTests -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:29 GST" name="beforeMethod" finished-at="2023-02-08T22:49:29 GST" duration-ms="41" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.LoginTests.successfulLoginTests()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="successfulLoginTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:29 GST" name="successfulLoginTests" finished-at="2023-02-08T22:49:38 GST" duration-ms="8321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfulLoginTests -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:38 GST" name="afterClass" finished-at="2023-02-08T22:49:41 GST" duration-ms="3328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:50:14 GST" name="quitDriver" finished-at="2023-02-08T22:50:14 GST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- Org.Mobile.Tests.LoginTests -->
+      <class name="Org.Mobile.Tests.ProductsTests">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="beforeClass" finished-at="2023-02-08T22:49:41 GST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="beforeMethod" finished-at="2023-02-08T22:49:41 GST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.ProductsTests.productsValidations()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="productsValidations()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="productsValidations" finished-at="2023-02-08T22:49:59 GST" duration-ms="17932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productsValidations -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:59 GST" name="afterClass" finished-at="2023-02-08T22:50:02 GST" duration-ms="2514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Org.Mobile.Tests.ProductsTests -->
+      <class name="Org.Mobile.Tests.ProductDetailsTests">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="beforeClass" finished-at="2023-02-08T22:50:02 GST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="beforeMethod" finished-at="2023-02-08T22:50:02 GST" duration-ms="72" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Org.Mobile.Tests.ProductDetailsTests.productsDetailsValidations()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="productsDetailsValidations()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="productsDetailsValidations" finished-at="2023-02-08T22:50:11 GST" duration-ms="9529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productsDetailsValidations -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:11 GST" name="afterClass" finished-at="2023-02-08T22:50:14 GST" duration-ms="2526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Org.Mobile.Tests.ProductDetailsTests -->
+    </test> <!-- SwagLabsMobileTestingLoginTests -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
