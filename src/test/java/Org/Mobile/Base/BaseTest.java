@@ -7,18 +7,20 @@ import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -155,7 +157,7 @@ public class BaseTest {
     }
 
 
-    public WebElement androidScrollToElement(){ //not working need to check
+    public WebElement androidScrollToElement() { //not working need to check
 
         return driver.findElement(AppiumBy.androidUIAutomator(
                 "new UiScrollable(new UiSelector()" + ".description(\"test-Inventory item page\")).scrollIntoView("
@@ -165,19 +167,19 @@ public class BaseTest {
 
 
     public void iOSScrollToElement() {
-        RemoteWebElement element = (RemoteWebElement)driver.findElement(By.name("test-ADD TO CART"));//Parent element which should be scrollable
+        RemoteWebElement element = (RemoteWebElement) driver.findElement(By.name("test-ADD TO CART"));//Parent element which should be scrollable
         //class name in above statement is the locator
         String elementID = element.getId(); //getting the id of the parent element
         HashMap<String, String> scrollObject = new HashMap<String, String>();//creating a hashmap object
         scrollObject.put("element", elementID); //passing the element id using the element key.
-         scrollObject.put("direction", "down"); //direction of the scroll, not needed when child element is declared
-       // scrollObject.put("predicateString", "label == \"ADD TO CART\""); //child element to where you want to scroll the page.
-	  //scrollObject.put("name", "test-ADD TO CART");
-	  scrollObject.put("toVisible", "Random Text"); // this is needed when you have the child element accessibility id.
+        scrollObject.put("direction", "down"); //direction of the scroll, not needed when child element is declared
+        // scrollObject.put("predicateString", "label == \"ADD TO CART\""); //child element to where you want to scroll the page.
+        //scrollObject.put("name", "test-ADD TO CART");
+        scrollObject.put("toVisible", "Random Text"); // this is needed when you have the child element accessibility id.
         driver.executeScript("mobile:scroll", scrollObject); //using execute script option and using mobile:scroll command we will perform the scrolling for parent element
-    //it will scroll upto the height of the scrollable element.
+        //it will scroll upto the height of the scrollable element.
 
-    //Note: if you know the accessibility id of the child element then you don't need to find the parent element
+        //Note: if you know the accessibility id of the child element then you don't need to find the parent element
         //replace parent by element and find By.name(accessibility id) and also use to visible key.
     }
 
@@ -215,11 +217,38 @@ public class BaseTest {
 
     }
 
+    @Parameters({"platformName"})
+    @AfterMethod
+    public void afterMethod(ITestResult result, String platformName) throws IOException {
+
+
+        if (result.getStatus() == ITestResult.FAILURE) {
+
+            File destFile = new File("scr" + File.separator + platformName + "_" +
+                    result.getTestClass().getRealClass().getSimpleName() + "_"
+                    + result.getMethod().getMethodName() + ".png");
+
+            getScreenshot(destFile);
+
+        }
+
+    }
+
+
+    public void getScreenshot(File destFile) throws IOException {
+
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, destFile);
+
+    }
+
 
     @AfterTest
     public void quitDriver() {
 
-       // driver.quit();
+
+        driver.quit();
 
 
     }

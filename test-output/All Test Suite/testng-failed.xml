@@ -9,16 +9,28 @@
     <parameter name="platformName" value="iOS"/>
     <parameter name="deviceName" value="iPhone 14 Pro Max"/>
     <classes>
-      <class name="Org.Mobile.Tests.ProductsTests">
+      <class name="Org.Mobile.Tests.ProductDetailsTests">
         <methods>
           <include name="startDriver"/>
           <include name="beforeClass"/>
           <include name="quitDriver"/>
+          <include name="productsDetailsValidations"/>
           <include name="beforeMethod"/>
-          <include name="productsValidations"/>
           <include name="afterClass"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- Org.Mobile.Tests.ProductsTests -->
+      </class> <!-- Org.Mobile.Tests.ProductDetailsTests -->
+      <class name="Org.Mobile.Tests.LoginTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="quitDriver"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="lockedOutUserTests"/>
+        </methods>
+      </class> <!-- Org.Mobile.Tests.LoginTests -->
     </classes>
   </test> <!-- SwagLabsMobileTestingLoginTests(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

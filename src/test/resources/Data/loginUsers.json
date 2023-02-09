@@ -15,7 +15,7 @@
 
   "lockedOutUser": {
 
-    "userName": "locked_out_user",
+    "userName": "locked_out_users",
     "password": "secret_sauce"
 
   },
@@ -28,6 +28,6 @@
 },
 
   "SLBDetails": {
-    "SLBPrice": "$29.99"
+    "SLBPrice": "$29.990"
   }
 }

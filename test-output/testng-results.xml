@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="10" passed="6" failed="0" skipped="0">
+<testng-results ignored="4" total="10" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-08T22:49:05 GST" name="All Test Suite" finished-at="2023-02-08T22:50:14 GST" duration-ms="68812">
+  <suite started-at="2023-02-09T19:19:40 GST" name="All Test Suite" finished-at="2023-02-09T19:21:01 GST" duration-ms="81036">
     <groups>
     </groups>
-    <test started-at="2023-02-08T22:49:05 GST" name="SwagLabsMobileTestingLoginTests" finished-at="2023-02-08T22:50:14 GST" duration-ms="68812">
+    <test started-at="2023-02-09T19:19:40 GST" name="SwagLabsMobileTestingLoginTests" finished-at="2023-02-09T19:21:01 GST" duration-ms="81036">
       <class name="Org.Mobile.Tests.LoginTests">
-        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:05 GST" name="startDriver" finished-at="2023-02-08T22:49:11 GST" duration-ms="5719" status="PASS">
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:40 GST" name="startDriver" finished-at="2023-02-09T19:19:45 GST" duration-ms="5083" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,11 +28,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="beforeClass" finished-at="2023-02-08T22:49:11 GST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:45 GST" name="beforeClass" finished-at="2023-02-09T19:19:45 GST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="beforeMethod" finished-at="2023-02-08T22:49:11 GST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:45 GST" name="beforeMethod" finished-at="2023-02-09T19:19:46 GST" duration-ms="232" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,11 +43,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="InvalidUserNameTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:11 GST" name="InvalidUserNameTests" finished-at="2023-02-08T22:49:17 GST" duration-ms="5835" status="PASS">
+        <test-method signature="InvalidUserNameTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:46 GST" name="InvalidUserNameTests" finished-at="2023-02-09T19:19:51 GST" duration-ms="5717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUserNameTests -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:17 GST" name="beforeMethod" finished-at="2023-02-08T22:49:17 GST" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:51 GST" name="afterMethod" finished-at="2023-02-09T19:19:51 GST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=InvalidUserNameTests status=SUCCESS method=LoginTests.InvalidUserNameTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:51 GST" name="beforeMethod" finished-at="2023-02-09T19:19:51 GST" duration-ms="23" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,11 +74,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidPasswordTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:17 GST" name="invalidPasswordTests" finished-at="2023-02-08T22:49:23 GST" duration-ms="6032" status="PASS">
+        <test-method signature="invalidPasswordTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:51 GST" name="invalidPasswordTests" finished-at="2023-02-09T19:19:57 GST" duration-ms="5799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPasswordTests -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:23 GST" name="beforeMethod" finished-at="2023-02-08T22:49:23 GST" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:57 GST" name="afterMethod" finished-at="2023-02-09T19:19:57 GST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidPasswordTests status=SUCCESS method=LoginTests.invalidPasswordTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:57 GST" name="beforeMethod" finished-at="2023-02-09T19:19:57 GST" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,11 +105,107 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="lockedOutUserTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:23 GST" name="lockedOutUserTests" finished-at="2023-02-08T22:49:29 GST" duration-ms="6483" status="PASS">
+        <test-method signature="lockedOutUserTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:19:57 GST" name="lockedOutUserTests" finished-at="2023-02-09T19:20:15 GST" duration-ms="17608" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.id: Sorry, this user has been locked out.}) (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({AppiumBy.id: Sorry, this user has been locked out.}) (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at Org.Mobile.Base.BaseTest.waitForVisibility(BaseTest.java:120)
+at Org.Mobile.Base.BaseTest.getAttribute(BaseTest.java:139)
+at Org.Mobile.Base.BaseTest.getText(BaseTest.java:154)
+at Org.Mobile.pom.LoginPage.getLockedOutUserErrorText(LoginPage.java:78)
+at Org.Mobile.pom.LoginPage.assertLockedOutUserErrorText(LoginPage.java:90)
+at Org.Mobile.Tests.LoginTests.lockedOutUserTests(LoginTests.java:94)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.id: Sorry, this user has been locked out.})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:125)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$d27c0df4.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 33 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@14bf57b2 (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:98)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:118)
+... 40 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: Sorry, this user has been locked out.})
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:119)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:171)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:164)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lockedOutUserTests -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:29 GST" name="beforeMethod" finished-at="2023-02-08T22:49:29 GST" duration-ms="41" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:20:15 GST" name="afterMethod" finished-at="2023-02-09T19:20:15 GST" duration-ms="443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=lockedOutUserTests status=FAILURE method=LoginTests.lockedOutUserTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:20:15 GST" name="beforeMethod" finished-at="2023-02-09T19:20:15 GST" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,25 +216,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="successfulLoginTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:29 GST" name="successfulLoginTests" finished-at="2023-02-08T22:49:38 GST" duration-ms="8321" status="PASS">
+        <test-method signature="successfulLoginTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:20:15 GST" name="successfulLoginTests" finished-at="2023-02-09T19:20:24 GST" duration-ms="8701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLoginTests -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:49:38 GST" name="afterClass" finished-at="2023-02-08T22:49:41 GST" duration-ms="3328" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:20:24 GST" name="afterMethod" finished-at="2023-02-09T19:20:24 GST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=successfulLoginTests status=SUCCESS method=LoginTests.successfulLoginTests()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:20:24 GST" name="afterClass" finished-at="2023-02-09T19:20:27 GST" duration-ms="2806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Org.Mobile.Tests.LoginTests@63355449]" started-at="2023-02-08T22:50:14 GST" name="quitDriver" finished-at="2023-02-08T22:50:14 GST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Org.Mobile.Tests.LoginTests@9225652]" started-at="2023-02-09T19:21:00 GST" name="quitDriver" finished-at="2023-02-09T19:21:01 GST" duration-ms="1161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- Org.Mobile.Tests.LoginTests -->
       <class name="Org.Mobile.Tests.ProductsTests">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="beforeClass" finished-at="2023-02-08T22:49:41 GST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915]" started-at="2023-02-09T19:20:27 GST" name="beforeClass" finished-at="2023-02-09T19:20:27 GST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="beforeMethod" finished-at="2023-02-08T22:49:41 GST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915]" started-at="2023-02-09T19:20:27 GST" name="beforeMethod" finished-at="2023-02-09T19:20:27 GST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,21 +261,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="productsValidations()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:41 GST" name="productsValidations" finished-at="2023-02-08T22:49:59 GST" duration-ms="17932" status="PASS">
+        <test-method signature="productsValidations()[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915]" started-at="2023-02-09T19:20:27 GST" name="productsValidations" finished-at="2023-02-09T19:20:45 GST" duration-ms="17909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productsValidations -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@635eaaf1]" started-at="2023-02-08T22:49:59 GST" name="afterClass" finished-at="2023-02-08T22:50:02 GST" duration-ms="2514" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915]" started-at="2023-02-09T19:20:45 GST" name="afterMethod" finished-at="2023-02-09T19:20:45 GST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=productsValidations status=SUCCESS method=ProductsTests.productsValidations()[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductsTests@1700915]" started-at="2023-02-09T19:20:45 GST" name="afterClass" finished-at="2023-02-09T19:20:48 GST" duration-ms="2886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Org.Mobile.Tests.ProductsTests -->
       <class name="Org.Mobile.Tests.ProductDetailsTests">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="beforeClass" finished-at="2023-02-08T22:50:02 GST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4]" started-at="2023-02-09T19:20:48 GST" name="beforeClass" finished-at="2023-02-09T19:20:48 GST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="beforeMethod" finished-at="2023-02-08T22:50:02 GST" duration-ms="72" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4]" started-at="2023-02-09T19:20:48 GST" name="beforeMethod" finished-at="2023-02-09T19:20:48 GST" duration-ms="13" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -142,11 +302,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="productsDetailsValidations()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:02 GST" name="productsDetailsValidations" finished-at="2023-02-08T22:50:11 GST" duration-ms="9529" status="PASS">
+        <test-method signature="productsDetailsValidations()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4]" started-at="2023-02-09T19:20:48 GST" name="productsDetailsValidations" finished-at="2023-02-09T19:20:57 GST" duration-ms="9132" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$29.990] but found [$29.99]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$29.990] but found [$29.99]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at Org.Mobile.pom.ProductsDescriptionPage.assertSLBPriceProdDetailsPg(ProductsDescriptionPage.java:51)
+at Org.Mobile.Tests.ProductDetailsTests.productsDetailsValidations(ProductDetailsTests.java:72)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productsDetailsValidations -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@5c30a9b0]" started-at="2023-02-08T22:50:11 GST" name="afterClass" finished-at="2023-02-08T22:50:14 GST" duration-ms="2526" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult,java.lang.String)[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4]" started-at="2023-02-09T19:20:57 GST" name="afterMethod" finished-at="2023-02-09T19:20:57 GST" duration-ms="643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=productsDetailsValidations status=FAILURE method=ProductDetailsTests.productsDetailsValidations()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Org.Mobile.Tests.ProductDetailsTests@21de60b4]" started-at="2023-02-09T19:20:57 GST" name="afterClass" finished-at="2023-02-09T19:21:00 GST" duration-ms="2537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
