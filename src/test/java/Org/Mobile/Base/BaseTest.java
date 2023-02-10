@@ -38,6 +38,8 @@ public class BaseTest {
 
     protected static Properties props;
 
+    protected static String dateTime;
+
     InputStream inputStream;
 
     public BaseTest() {
@@ -52,6 +54,9 @@ public class BaseTest {
     public void startDriver(String platformName, String platformVersion, String deviceName) throws Exception {
 
         platformname = platformName;
+
+        TestUtils testUtils = new TestUtils();
+        dateTime = testUtils.getDateTime();
 
         URL url;
         props = new Properties();
@@ -219,14 +224,14 @@ public class BaseTest {
 
     }
 
-    @Parameters({"platformName"})
+    @Parameters({"platformName", "deviceName"})
     @AfterMethod
-    public void afterMethod(ITestResult result, String platformName) throws IOException {
+    public void afterMethod(ITestResult result, String platformName, String deviceName) throws IOException {
 
 
         if (result.getStatus() == ITestResult.FAILURE) {
 
-            File destFile = new File("scr" + File.separator + platformName + "_" +
+            File destFile = new File("Screenshots" + File.separator + platformName + "_" + deviceName + File.separator + getDateTime() + "_" +
                     result.getTestClass().getRealClass().getSimpleName() + "_"
                     + result.getMethod().getMethodName() + ".png");
 
@@ -244,6 +249,14 @@ public class BaseTest {
         FileUtils.copyFile(srcFile, destFile);
 
     }
+
+
+    public String getDateTime(){
+
+        return dateTime;
+
+    }
+
 
 
     @AfterTest

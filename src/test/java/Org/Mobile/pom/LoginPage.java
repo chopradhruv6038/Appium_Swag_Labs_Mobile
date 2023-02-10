@@ -46,6 +46,7 @@ public class LoginPage extends BaseTest {
 
         Assert.assertTrue(swagLabsLogoLoginPg.isDisplayed());
         Assert.assertTrue(swagLabsLogoLoginPg.isEnabled());
+        Assert.assertTrue(swagLabsLogoLoginPg.isSelected());
 
         return this;
     }
