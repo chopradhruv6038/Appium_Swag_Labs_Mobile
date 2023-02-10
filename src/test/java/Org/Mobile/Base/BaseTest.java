@@ -1,6 +1,7 @@
 package Org.Mobile.Base;
 
 import Org.Mobile.Utils.TestUtils;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
@@ -27,6 +28,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Properties;
+
 
 public class BaseTest {
 
