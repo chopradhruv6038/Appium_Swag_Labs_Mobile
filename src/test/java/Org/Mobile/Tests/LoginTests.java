@@ -113,9 +113,9 @@ public class LoginTests extends BaseTest {
 
 
 
-        terminateApp();
+        //terminateApp();
 
-        launchApp();
+        //launchApp();
 
 
     }

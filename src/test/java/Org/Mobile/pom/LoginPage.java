@@ -3,11 +3,15 @@ package Org.Mobile.pom;
 import Org.Mobile.Base.BaseTest;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginPage extends BaseTest {
 
+    @AndroidFindBy(xpath = "//android.widget.ScrollView[@content-desc=\"test-Login\"]/android.view.ViewGroup/android.widget.ImageView[1]")
+
+    private WebElement swagLabsLogoLoginPg;
 
     @AndroidFindBy(accessibility = "test-Username")
     @iOSXCUITFindBy(id = "test-Username")
@@ -34,6 +38,18 @@ public class LoginPage extends BaseTest {
     String expectedErrorTextInvalidUsernamePasswrd = "Username and password do not match any user in this service.";
 
     String expectedErrorTextLockedOutUser = "Sorry, this user has been locked out.";
+
+
+    //methods:
+
+    public LoginPage assertSwagLabsLogoOnLoginPage(){
+
+        Assert.assertTrue(swagLabsLogoLoginPg.isDisplayed());
+        Assert.assertTrue(swagLabsLogoLoginPg.isEnabled());
+
+        return this;
+    }
+
 
 
     public LoginPage enterUserName (String username){

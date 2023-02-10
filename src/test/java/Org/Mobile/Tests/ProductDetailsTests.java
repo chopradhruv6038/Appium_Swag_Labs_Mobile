@@ -55,7 +55,7 @@ public class ProductDetailsTests extends BaseTest {
         loginPage = new LoginPage();
         productsDescriptionPage = new ProductsDescriptionPage();
 
-        System.out.println("\n" + " +*** Starting Test : ProductsTests, Method Name : " + m.getName() + " ****");
+        System.out.println("\n" + " +*** Starting Test : ProductsDetailsTests, Method Name : " + m.getName() + " ****");
 
     }
 

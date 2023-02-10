@@ -32,6 +32,15 @@ public class ProductsPage extends BaseTest {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"test-ADD TO CART\"])[1]")
     private WebElement AddToCartBtn;
 
+    @AndroidFindBy(accessibility = "test-Menu")
+    @iOSXCUITFindBy(accessibility = "test-Menu")
+    private WebElement burgerMenuProdPg;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-LOGOUT\"]")
+    @iOSXCUITFindBy(accessibility = "test-LOGOUT")
+    private WebElement logoutLnkProdPg;
+
+
     String expectedProductsPageTitle = "PRODUCTS";
     String expectedSauceLabsBackPackTitle = "Sauce Labs Backpack";
     String expectedSauceLabsBackPackPrice = "$29.99";
@@ -93,7 +102,7 @@ public class ProductsPage extends BaseTest {
 
         Assert.assertEquals(getSauceLabsBackPackTitle(), sauceLabsBackPackExpectedTitle());
 
-        System.out.println("\n" + "Actual SLB Title : " + getSauceLabsBackPackTitle() + "\n" + "Expected SLB Title : " + sauceLabsBackPackExpectedTitle() );
+        System.out.println("\n" + "Actual SLB Title : " + getSauceLabsBackPackTitle() + "\n" + "Expected SLB Title : " + sauceLabsBackPackExpectedTitle());
 
         return this;
     }
@@ -119,23 +128,23 @@ public class ProductsPage extends BaseTest {
 
     }
 
-    public String getAddToCartBtnText(){
+    public String getAddToCartBtnText() {
 
         return getText(AddToCartBtn);
     }
 
-    public String expectedAddToCartBtnText(){
+    public String expectedAddToCartBtnText() {
 
         return expectedAddToCartBtnText;
     }
 
-    public String getAddToCartBtnClickableValue(){
+    public String getAddToCartBtnClickableValue() {
 
         return getText(AddToCartBtn);
 
     }
 
-    public ProductsPage assertAddToCartBtn(){
+    public ProductsPage assertAddToCartBtn() {
 
         Assert.assertEquals(getAddToCartBtnText(), expectedAddToCartBtnText());
         assert AddToCartBtn.isDisplayed();
@@ -144,12 +153,27 @@ public class ProductsPage extends BaseTest {
         return this;
     }
 
-    public ProductsDescriptionPage clickSlbProduct(){
+    public ProductsDescriptionPage clickSlbProduct() {
 
         click(productSLB);
 
         return new ProductsDescriptionPage();
     }
 
+    public ProductsPage clickBurgerMenu() {
+
+
+
+        click(burgerMenuProdPg);
+
+        return this;
+    }
+
+    public LoginPage clickLogoutBtn(){
+
+        click(logoutLnkProdPg);
+
+    return new LoginPage();
+    }
 
 }
